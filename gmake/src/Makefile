@@ -25,6 +25,9 @@ LIB = libcctz.a
 %.cc : ../../src/%.cc
 	sed -e 's|src/||;'  < $<  > $@
 
+%.h : ../../src/%.h
+	sed -e 's|src/||;'  < $<  > $@
+
 %.o : %.cc %.h
 	$(CC) -c -fpic -o $@ $<
 
@@ -37,3 +40,6 @@ $(LIB) : $(SRC) $(HEADER) $(OBJ) Makefile
 clean:
 	rm -f $(OBJ) $(LIB)
 	rm -f *cc *h *~
+
+install:
+	sudo cp libcctz.a /usr/local/lib/
