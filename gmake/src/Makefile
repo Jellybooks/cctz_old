@@ -43,3 +43,4 @@ clean:
 
 install:
 	sudo cp libcctz.a /usr/local/lib/
+	sudo cp cctz.h /usr/local/include/
