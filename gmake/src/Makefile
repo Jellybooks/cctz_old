@@ -1,4 +1,4 @@
-CC = clang++ -ggdb3 -Wall -Wextra -std=c++14 $(OPTIMIZE)
+CC = clang++ -ggdb3 -Wall -Wextra -std=c++14 -pthread $(OPTIMIZE)
 
 SRC =				\
 	cctz_cnv.cc 		\
